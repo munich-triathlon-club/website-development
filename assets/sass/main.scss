@@ -1,0 +1,83 @@
+$color1: #333333; // Dark Gray
+$color2: #666666; // Medium Gray
+$color3: #999999; // Light Gray
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: content-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  padding-left: 2em;
+  color: white;
+  background: linear-gradient(to top, black, $color1);
+
+  > div {
+    align-self: center;
+    margin-right: 3em;
+    > a > i.fa {
+      font-size: 30px;
+    }
+  }
+
+  h1 {
+    flex-grow: 3;
+  }
+
+  > span {
+    align-self: center;
+    font-size: medium;
+    margin-right: 2em;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: $color3;
+  }
+}
+
+main {
+  flex-grow: 1;
+  color: white;
+  background-color: $color3;
+}
+
+footer {
+  display: flex;
+  padding-left: 2em;
+  height: 100px;
+  color: white;
+  background-color: $color1;
+  justify-content: center;
+
+  > div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    color: $color3;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: $color3;
+  }
+}
+
+impressum {
+}

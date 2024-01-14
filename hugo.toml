@@ -1,0 +1,4 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'de-de'
+title = 'Munich Triathlon Club e.V.'
+disableKinds = ['taxonomy', 'term']
