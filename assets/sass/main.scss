@@ -1,6 +1,8 @@
 $color1: #333333; // Dark Gray
 $color2: #666666; // Medium Gray
 $color3: #999999; // Light Gray
+$mtc-yellow: #FEE581; // MTC Yellow
+$header-height: 60px;
 
 body {
   margin: 0;
@@ -11,7 +13,7 @@ body {
 
 * {
   box-sizing: content-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", serif;
 }
 
 h1 {
@@ -19,11 +21,10 @@ h1 {
 }
 
 header {
-  height: 84px;
+  height: $header-height;
   display: flex;
-  padding: 0 12px;
-  color: white;
-  background: linear-gradient(to top, rgba(23,23,23,0.9), $color1);
+  padding: 0 24px;
+  background: linear-gradient(to top, rgba(23, 23, 23, 0.808), $color1);
   align-items: center;
   gap: 24px;
 
@@ -31,11 +32,11 @@ header {
     align-self: center;
     > a > i.fa {
       font-size: 24px;
+      color: $mtc-yellow;
     }
   }
 
-  .title {
-    min-width: 240px;
+  .spacer {
     flex-grow: 1;
   }
 
@@ -44,12 +45,12 @@ header {
   }
 
   a {
-    color: white;
+    color: $mtc-yellow;
     text-decoration: none;
   }
 
   a:visited {
-    color: $color3;
+    color: $mtc-yellow;
   }
 }
 
@@ -66,6 +67,7 @@ main {
 
   .video-container {
 
+    min-height: calc(100vh - #{$header-height});
     flex-grow: 1;
     position: relative;
   
@@ -86,17 +88,11 @@ main {
       width: 100%;
       height: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      flex-direction: column;;
       align-items: center;
 
-      .overlay-text {
-        position: absolute;
-        bottom: 40px;
-        font-size: 50px;
-        color: rgba(255, 255, 255, 0.5);
-        text-align: center;
-        margin: 0 2em;
+      div {
+        color: rgba(255, 255, 255, 0.767)
       }
     }
   }
