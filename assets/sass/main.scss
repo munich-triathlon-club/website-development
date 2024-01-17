@@ -14,31 +14,28 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-size: 24px;
+}
+
 header {
-  height: 100px;
+  height: 84px;
   display: flex;
-  padding-left: 2em;
+  padding: 0 12px;
   color: white;
-  background: linear-gradient(to top, black, $color1);
+  background: linear-gradient(to top, rgba(23,23,23,0.9), $color1);
   align-items: center;
+  gap: 24px;
 
   > div {
     align-self: center;
-    margin-right: 3em;
     > a > i.fa {
-      font-size: 30px;
+      font-size: 24px;
     }
   }
 
-  h1 {
-    flex-grow: 1;
-    font-size: 40px;
-  }
-
-  > span {
-    align-self: center;
-    font-size: medium;
-    margin-right: 2em;
+  .links {
+    font-size: 12px;
   }
 
   a {
@@ -102,8 +99,7 @@ main {
 
 footer {
   display: flex;
-  padding-left: 2em;
-  height: 300px;
+  height: 160px;
   color: white;
   background-color: $color1;
   justify-content: center;
