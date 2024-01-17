@@ -34,6 +34,11 @@ header {
     }
   }
 
+  .title {
+    min-width: 240px;
+    flex-grow: 1;
+  }
+
   .links {
     font-size: 12px;
   }
