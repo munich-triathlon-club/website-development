@@ -1,4 +1,4 @@
-baseURL = 'https://munich-triathlon-club.github.io/website'
+baseURL = 'https://munichtriathlonclub.de'
 languageCode = 'de-de'
 title = 'Munich Triathlon Club'
 disableKinds = ['taxonomy', 'term']
