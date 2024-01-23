@@ -1,9 +1,6 @@
-$color1: #333333; // Dark Gray
-$color2: #666666; // Medium Gray
-$color3: #999999; // Light Gray
 $mtc-black: #292929; // MTC Black
 $mtc-yellow: #fee581; // MTC Yellow
-$header-height: 60px;
+$header-height: 84px;
 
 body {
   margin: 0;
@@ -15,10 +12,6 @@ body {
 * {
   box-sizing: content-box;
   font-family: "Montserrat", sans-serif;
-}
-
-h1 {
-  font-size: 24px;
 }
 
 header {
@@ -36,13 +29,12 @@ main {
 
   flex-grow: 1;
   color: white;
-  background-color: $color3;
 
   display: flex;
   flex-direction: column;
 
   .video-container {
-    min-height: calc(100vh - #{$header-height});
+    height: calc(100vh - #{$header-height});
     flex-grow: 1;
     position: relative;
 
@@ -55,50 +47,6 @@ main {
       left: 0;
       object-fit: cover;
     }
-
-    .video-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      div {
-        color: white;
-      }
-
-      .overlay-header {
-        margin-top: 24px;
-        font-size: 60px;
-        font-weight: bolder;
-        font-family: Findel;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-      }
-
-      .overlay-subheader {
-        margin-top: 24px;
-        font-size: 36px;
-        text-align: center;
-      }
-
-      .overlay-text {
-        font-size: 30px;
-        flex-grow: 1;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-      }
-
-      .overlay-subtext {
-        font-size: 18px;
-        margin-bottom: 120px;
-      }
-    }
   }
 }
 
@@ -107,11 +55,11 @@ footer {
   color: white;
 
   a {
-    color: $mtc-yellow;
+    color: rgb(113, 113, 122);
     text-decoration: none;
   }
 
   a:visited {
-    color: $mtc-yellow;
+    color: rgb(113, 113, 122);
   }
 }
