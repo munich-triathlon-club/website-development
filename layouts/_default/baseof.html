@@ -29,7 +29,7 @@
 
 <body>
     {{ if in .Site.BaseURL "development" }}
-    <div class="bg-zinc-500 flex justify-center">Development Environment</div>
+        <div class="bg-zinc-500 flex justify-center">Development Environment</div>
     {{ end }}
     <header class="px-4 flex items-center justify-between">
         {{block "header" . }}
@@ -47,6 +47,7 @@
 
     <main class="bg-zinc-500">
         {{ block "main" . }}{{ end }}
+        {{ block "strava" . }}{{ end }}
     </main>
 
     <footer>
