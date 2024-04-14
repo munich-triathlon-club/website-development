@@ -2,3 +2,13 @@ baseURL = 'https://munichtriathlonclub.de'
 languageCode = 'de-de'
 title = 'Munich Triathlon Club'
 disableKinds = ['taxonomy', 'term']
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Impressum"
+url = "/impressum/"
+weight = 2

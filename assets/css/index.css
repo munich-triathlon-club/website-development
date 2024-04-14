@@ -560,6 +560,10 @@ video {
   z-index: 10;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -576,8 +580,20 @@ video {
   height: 100%;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
 .w-full {
   width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-col {
@@ -586,6 +602,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {

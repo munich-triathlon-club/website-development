@@ -1,0 +1,14 @@
+<header class="px-4 flex items-center justify-end">
+    <div class="links flex gap-2 text-2xl bold justify-center items-center z-10">
+        <div class="ml-5 cursor-pointer"><i id="nav-icon-menu" class="fa-solid fa-bars"></i></div>
+    </div>
+</header>
+<nav>
+    <ul class="flex flex-col items-center">
+        {{ range .Site.Menus.main }}
+        <li>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>
