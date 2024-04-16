@@ -9,6 +9,11 @@ url = "/"
 weight = 1
 
 [[menu.main]]
+name = "Training"
+url = "/training/"
+weight = 2
+
+[[menu.main]]
 name = "Impressum"
 url = "/impressum/"
-weight = 2
+weight = 3
