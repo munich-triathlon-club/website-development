@@ -580,10 +580,6 @@ video {
   height: 100%;
 }
 
-.min-h-screen {
-  min-height: 100vh;
-}
-
 .w-80 {
   width: 20rem;
 }
