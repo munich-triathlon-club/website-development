@@ -17,6 +17,12 @@
   box-sizing: border-box;
 }
 
+@media only screen and (max-width: 768px) {
+  .ss-content {
+    width: 100%;
+  }
+}
+
 .ss-content.rtl {
   width: calc(100% + 18px);
   right: auto;
