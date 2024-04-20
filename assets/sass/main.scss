@@ -13,7 +13,7 @@ body {
 }
 
 #scroll-container {
-  height: 100%;
+  height: auto;
   overflow: auto;
 }
 
@@ -33,6 +33,7 @@ body {
 }
 
 #backdrop {
+  backdrop-filter: blur(4px);
   position: fixed;
   top: 0;
   left: 0;
@@ -59,8 +60,8 @@ header {
 main {
   max-width: 3840px;
   max-height: 2158px;
+  min-height: calc(100vh - #{$header-height});
 
-  flex-grow: 1;
   color: white;
 
   display: flex;
