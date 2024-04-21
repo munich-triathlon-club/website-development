@@ -1,14 +1,18 @@
+{{ $currentPage := . }}
 <header class="px-4 flex items-center justify-end">
     <div class="links flex gap-2 text-2xl bold justify-center items-center z-10">
-        <div class="ml-5 cursor-pointer"><i id="nav-icon-menu" class="fa-solid fa-bars"></i></div>
+        <div class="ml-5 cursor-pointer"><i id="nav-icon-menu" class="fa-solid fa-xmark"></i></div>
     </div>
 </header>
 <nav>
     <ul class="flex flex-col items-center">
         {{ range .Site.Menus.main }}
-        <li>
-            <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
+        <a href="{{ .URL }}" class="w-2/3">
+            <li
+                class="my-2 h-12 flex items-center justify-center rounded-md border-solid border-mtc-yellow border-2 hover:bg-mtc-yellow -skew-x-20 hover:text-black {{ if ($currentPage.IsMenuCurrent .Menu . ) }} active{{ end }}">
+                <span class="skew-x-20">{{ .Name }}</span>
+            </li>
+        </a>
         {{ end }}
     </ul>
 </nav>

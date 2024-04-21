@@ -6,8 +6,15 @@ module.exports = {
       sans: ["Montserrat", "sans-serif"],
       serif: ["Findel", "serif"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        "mtc-black": "292929",
+        "mtc-yellow": "#fee581",
+      },
+      skew: {
+        20: "20deg",
+      },
+    },
   },
   plugins: [],
-}
-
+};
