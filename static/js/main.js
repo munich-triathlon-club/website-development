@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   addNavClickHandler("nav-icon-header");
   addNavClickHandler("nav-icon-menu");
   addBackDropClickHandler();
+  removeSimpleScrollOnMobile();
 });
 
 function addNavClickHandler(id) {
@@ -16,4 +17,11 @@ function addBackDropClickHandler() {
     document.getElementById("navbar").classList.remove("open");
     document.getElementById("backdrop").classList.remove("open");
   });
+}
+
+function removeSimpleScrollOnMobile() {
+  if(window.innerWidth >= 768) {
+    const scrollContainer = document.getElementById("scroll-container")
+    SimpleScrollbar.initEl(scrollContainer);
+  }
 }
