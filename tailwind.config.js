@@ -8,7 +8,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        "mtc-black": "292929",
+        "mtc-black": "#292929",
         "mtc-yellow": "#fee581",
       },
       skew: {

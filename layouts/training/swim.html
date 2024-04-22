@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="p-6 bg-zinc-100 h-full text-black grow">
+    {{ .Content }}
+</div>
+{{ end }}
+
+{{ define "2ndLevelNavigation"}}
+<div class="bg-zinc-600 w-full h-12">
+    <div class="flex items-center justify-evenly text-mtc-yellow h-full">
+        <a href="{{ .Site.BaseURL }}/training/swim"
+            class="box-border w-full  h-full flex justify-center items-center">Swim</a>
+        <a href="{{ .Site.BaseURL }}/training/bike"
+            class="box-border w-full h-full flex justify-center items-center">Bike</a>
+        <a href="{{ .Site.BaseURL }}/training/run"
+            class="box-border w-full  h-full flex justify-center items-center">Run</a>
+    </div>
+</div>
+{{ end }}
