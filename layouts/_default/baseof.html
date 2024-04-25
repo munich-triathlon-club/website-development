@@ -5,12 +5,12 @@
     <style>
         @font-face {
             font-family: "Montserrat";
-            src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+            src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
         }
 
         @font-face {
             font-family: "Findel";
-            src: url('fonts/Findel-Display-Regular.otf') format('opentype');
+            src: url('/fonts/Findel-Display-Regular.otf') format('opentype');
         }
     </style>
     <meta charset="UTF-8" />
@@ -36,49 +36,44 @@
 </head>
 
 <body>
-    {{/*  <div id="scroll-container">  */}}
-        {{/*  <div id="content" class="flex flex-col w-full">  */}}
-            {{ if in .Site.BaseURL "development" }}
-            <div class="bg-zinc-500 flex justify-center">Development Environment</div>
-            {{ end }}
-            <header class="px-4 flex items-center justify-between">
-                {{block "header" . }}
-                <div class="h-full py-2 box-border">
-                    <a href="{{ .Site.BaseURL }}"><img class="h-full object-cover"
-                            src="{{ .Site.BaseURL }}/icons/logo-transparent.png" /></a>
-                </div>
-                <div class="links flex gap-2 text-2xl bold justify-center items-center z-10">
-                    <a href="https://www.instagram.com/mtc_munich/" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/mtcmunich/" target="_blank"><i
-                            class="fa-brands fa-facebook"></i></a>
-                    <a href="mailto:munichtriathlonclub@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-                    <div class="ml-5 cursor-pointer"><i id="nav-icon-header" class="fa-solid fa-bars"></i></div>
-                </div>
-                {{ end }}
-            </header>
-            {{ block "2ndLevelNavigation" . }}{{ end }}
+    {{ if in .Site.BaseURL "development" }}
+    <div class="bg-zinc-500 flex justify-center">Development Environment</div>
+    {{ end }}
+    <header class="px-4 flex items-center justify-between">
+        {{block "header" . }}
+        <div class="h-full py-2 box-border">
+            <a href="{{ .Site.BaseURL }}"><img class="h-full object-cover"
+                    src="{{ .Site.BaseURL }}/icons/logo-transparent.png" /></a>
+        </div>
+        <div class="links flex gap-2 text-2xl bold justify-center items-center z-10">
+            <a href="https://www.instagram.com/mtc_munich/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/mtcmunich/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="mailto:munichtriathlonclub@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            <div class="ml-5 cursor-pointer"><i id="nav-icon-header" class="fa-solid fa-bars"></i></div>
+        </div>
+        {{ end }}
+    </header>
+    {{ block "2ndLevelNavigation" . }}{{ end }}
 
-            <main>
-                {{ block "main" . }}{{ end }}
-                {{ block "strava" . }}{{ end }}
-            </main>
+    <main>
+        {{ block "main" . }}{{ end }}
+        {{ block "map" . }}{{ end }}
+        {{ block "strava" . }}{{ end }}
+    </main>
 
-            <footer>
-                {{ block "footer" . }}
-                <div class="flex flex-col justify-center items-center text-sm gap-4 py-6">
-                    <a href="{{ .Site.BaseURL }}/impressum"><span>Impressum</span></a>
-                    <div>© 2024 Munich Triathlon Club e.V.</div>
-                    <div class="flex flex-col items-center justify-center">
-                        <div>Made with ❤️ by </div>
-                        <div><i class="fa-brands fa-github pr-2 text-zinc-500"></i><a
-                                href="https://github.com/schaeferto" target="_blank">schaeferto</a></div>
-                    </div>
-                </div>
-                {{ end }}
-            </footer>
-        {{/*  </div>  */}}
-    {{/*  </div>  */}}
+    <footer>
+        {{ block "footer" . }}
+        <div class="flex flex-col justify-center items-center text-sm gap-4 py-6">
+            <a href="{{ .Site.BaseURL }}/impressum"><span>Impressum</span></a>
+            <div>© 2024 Munich Triathlon Club e.V.</div>
+            <div class="flex flex-col items-center justify-center">
+                <div>Made with ❤️ by </div>
+                <div><i class="fa-brands fa-github pr-2 text-zinc-500"></i><a href="https://github.com/schaeferto"
+                        target="_blank">schaeferto</a></div>
+            </div>
+        </div>
+        {{ end }}
+    </footer>
     <div id="navbar" class="w-72">
         {{ partial "navbar.html" . }}
     </div>

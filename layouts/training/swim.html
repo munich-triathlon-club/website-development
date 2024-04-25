@@ -1,9 +1,3 @@
-{{ define "main" }}
-<div class="p-6 bg-zinc-100 h-full text-black grow">
-    {{ .Content }}
-</div>
-{{ end }}
-
 {{ define "2ndLevelNavigation"}}
 <div class="bg-zinc-600 w-full h-12">
     <div class="flex items-center justify-evenly text-mtc-yellow h-full">
@@ -14,5 +8,32 @@
         <a href="{{ .Site.BaseURL }}/training/run"
             class="box-border w-full  h-full flex justify-center items-center">Run</a>
     </div>
+</div>
+{{ end }}
+
+{{ define "main" }}
+<div class="p-6 bg-zinc-100 h-full text-black grow">
+    {{ .Content }}
+</div>
+{{ end }}
+
+
+{{ define "strava" }}
+<div class="bg-gradient-to-r from-zinc-400 flex flex-col items-center justify-center md:flex-row h-full py-6">
+    <div class="h-1/2 w-72 md:mr-12 md:pb-4">
+        <img src="/icons/api_logo_pwrdBy_strava_stack_white.svg" alt="Strava Logo" />
+    </div>
+    <iframe allowtransparency frameborder='0' height='454' scrolling='no'
+        src='https://www.strava.com/clubs/1222966/latest-rides/227a837d2882ab46d339c8a035e1673d02c5e91f?show_rides=true'
+        width='300'></iframe>
+</div>
+{{ end }}
+
+{{ define "map"}}
+<div class="bg-mtc-black flex justify-center items-center" style="height: 550px;">
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d665.8174414880851!2d11.547130206822864!3d48.1243208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf4c48854137%3A0xf4227c7e90c69df3!2sSchwimmschule%20Wasserm%C3%A4use%20M%C3%BCnchen%20Isarvorstadt!5e0!3m2!1sde!2sde!4v1714078130643!5m2!1sde!2sde"
+    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 {{ end }}
