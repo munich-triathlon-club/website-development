@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   addNavClickHandler("nav-icon-header");
   addNavClickHandler("nav-icon-menu");
   addBackDropClickHandler();
-  removeSimpleScrollOnMobile();
+  // removeSimpleScrollOnMobile();
 });
 
 function addNavClickHandler(id) {

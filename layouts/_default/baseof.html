@@ -19,12 +19,14 @@
     {{/* Reference to TailwindCSS */}}
     {{ $css := resources.Get "css/index.css" | minify | fingerprint }}
     <link rel="stylesheet" type="text/css" href="{{ $css.Permalink }}" />
+    {{/* Reference to FontAwesome */}}
+    {{ $fontawesome := resources.Get "fontawesome/all.min.css" | fingerprint }}
+    <link rel="stylesheet" type="text/css" href="{{ $fontawesome.Permalink }}" />
     {{/* Reference to SASS */}}
     {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://kit.fontawesome.com/004a95d394.js" crossorigin="anonymous"></script>
     {{/* simple-scrollbar https://github.com/buzinas/simple-scrollbar */}}
     {{ $simplescroll := resources.Get "css/simple-scrollbar.css" | minify | fingerprint }}
     <link rel="stylesheet" type="text/css" href="{{ $simplescroll.Permalink }}" />
@@ -34,8 +36,8 @@
 </head>
 
 <body>
-    <div id="scroll-container">
-        <div id="content" class="flex flex-col w-full">
+    {{/*  <div id="scroll-container">  */}}
+        {{/*  <div id="content" class="flex flex-col w-full">  */}}
             {{ if in .Site.BaseURL "development" }}
             <div class="bg-zinc-500 flex justify-center">Development Environment</div>
             {{ end }}
@@ -75,8 +77,8 @@
                 </div>
                 {{ end }}
             </footer>
-        </div>
-    </div>
+        {{/*  </div>  */}}
+    {{/*  </div>  */}}
     <div id="navbar" class="w-72">
         {{ partial "navbar.html" . }}
     </div>
