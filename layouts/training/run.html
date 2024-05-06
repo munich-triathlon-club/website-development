@@ -1,19 +1,26 @@
 {{ define "2ndLevelNavigation"}}
-<div class="bg-zinc-600 w-full h-12">
-    <div class="flex items-center justify-evenly text-mtc-yellow h-full">
-        <a href="{{ .Site.BaseURL }}/training/swim"
-            class="box-border w-full  h-full flex justify-center items-center">Swim</a>
-        <a href="{{ .Site.BaseURL }}/training/bike"
-            class="box-border w-full h-full flex justify-center items-center">Bike</a>
-        <a href="{{ .Site.BaseURL }}/training/run"
-            class="box-border w-full  h-full flex justify-center items-center">Run</a>
-    </div>
+<div class="bg-mtc-black w-full h-12 flex justify-center pt-2">
+    <a href="{{ .Site.BaseURL }}/training/swim"
+        class="text-white mx-3 h-8 flex w-36 items-center justify-center rounded-md border-solid border-mtc-yellow border-2 md:hover:bg-mtc-yellow -skew-x-20 md:hover:text-black">
+        <span class="skew-x-20">Swim</span>
+    </a>
+    <a href="{{ .Site.BaseURL }}/training/bike"
+        class="text-white mx-3 h-8 flex w-36 items-center justify-center rounded-md border-solid border-mtc-yellow border-2 md:hover:bg-mtc-yellow -skew-x-20 md:hover:text-black">
+        <span class="skew-x-20">Bike</span>
+    </a>
+    <a href="{{ .Site.BaseURL }}/training/run"
+        class="text-mtc-black bg-mtc-yellow mx-3 h-8 flex w-36 items-center justify-center rounded-md border-solid border-mtc-yellow border-2 md:hover:bg-mtc-yellow -skew-x-20 md:hover:text-black">
+        <span class="skew-x-20">Run</span>
+    </a>
 </div>
 {{ end }}
 
 {{ define "main" }}
-<div class="p-6 bg-zinc-100 h-full text-black grow bg-local bg-[right]" style="background-image: url(/images/running-6252827_1280.jpg)">
-    {{ .Content }}
+<div class="h-64 relative">
+    <div class="h-full w-full absolute z-10 flex items-center justify-center">
+        <p class="serif font-bold absolute top-4 text-5xl">Running</p>
+    </div>
+    <img src="/images/track.jpg" alt="Track" class="absolute top-0 h-full w-full object-cover bg-no-repeat bg-center" />
 </div>
 {{ end }}
 
