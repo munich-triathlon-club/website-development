@@ -30,9 +30,9 @@
     {{/* simple-scrollbar https://github.com/buzinas/simple-scrollbar */}}
     {{ $simplescroll := resources.Get "css/simple-scrollbar.css" | minify | fingerprint }}
     <link rel="stylesheet" type="text/css" href="{{ $simplescroll.Permalink }}" />
-    <script src="{{ .Site.BaseURL }}/js/simple-scrollbar.min.js"></script>
-    {{/* Custom CSS */}}
-    <script src="{{ .Site.BaseURL }}/js/main.js"></script>
+    {{/* Javascript */}}
+    {{ $js := resources.Get "js/main.js" }}
+    <script src="{{ $js.RelPermalink }}" defer></script>
 </head>
 
 <body>

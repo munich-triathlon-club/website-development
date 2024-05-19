@@ -8,7 +8,7 @@
     <ul class="flex flex-col items-center">
         {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
-        <a href="{{ (index (first 1 .Children) 0).URL }}" class="w-2/3">
+        <a href="#" class="w-2/3" onclick="toggleChildren('{{ .Name }}-children')">
             <li
                 class="my-4 h-12 flex items-center justify-center rounded-md border-solid border-mtc-yellow border-2 md:hover:bg-mtc-yellow -skew-x-20 md:hover:text-black">
                 <span class="skew-x-20">{{ .Name }}</span>
@@ -23,13 +23,15 @@
         </a>
         {{ end }}
 
-        {{ range .Children }}
-        <a href="{{ .URL }}" class="w-7/12 self-end mr-12">
-            <li
-                class="my-4 h-10 flex items-center justify-center rounded-md border-solid border-mtc-yellow border-2 md:hover:bg-mtc-yellow -skew-x-20 md:hover:text-black {{ if ($currentPage.IsMenuCurrent .Menu . ) }} active{{ end }}">
-                <span class="skew-x-20">{{ .Name }}</span>
-            </li>
-        {{ end }}
+        <div id="{{ .Name  }}-children" class="w-7/12 self-end mr-12 hidden">
+            {{ range .Children }}
+            <a href="{{ .URL }}">
+                <li
+                    class="my-4 h-10 flex items-center justify-center rounded-md border-solid border-mtc-yellow border-2 md:hover:bg-mtc-yellow -skew-x-20 md:hover:text-black {{ if ($currentPage.IsMenuCurrent .Menu . ) }} active{{ end }}">
+                    <span class="skew-x-20">{{ .Name }}</span>
+                </li>
+            {{ end }}
+        </div>
 
         {{ end }}
     </ul>
