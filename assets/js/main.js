@@ -27,14 +27,5 @@ function removeSimpleScrollOnMobile() {
 }
 
 function toggleChildren(childrenId) {
-  toggleDisplay(childrenId);
-}
-
-function toggleDisplay(elementId) {
-  var element = document.getElementById(elementId);
-  if (element.style.display === "none") {
-      element.style.display = "block";
-  } else {
-      element.style.display = "none";
-  }
+  document.getElementById(childrenId).classList.toggle("hidden");
 }
