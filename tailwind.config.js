@@ -14,6 +14,9 @@ module.exports = {
       skew: {
         20: "20deg",
       },
+      minHeight: {
+        "32.5": "32.5em",
+      }
     },
   },
   plugins: [],

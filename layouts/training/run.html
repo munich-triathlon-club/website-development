@@ -15,10 +15,10 @@
 </div>
 {{ end }}
 
-{{ define "main" }}
-<div class="h-64 relative">
-    <div class="h-full w-full absolute z-10 flex items-center justify-center">
-        <p class="serif font-bold absolute top-4 text-5xl">Running</p>
+{{ define "header" }}
+<div class="section-header">
+    <div class="h-full w-full absolute z-10 flex">
+        <p class="serif font-bold my-auto mx-8 text-5xl"> Running</p>
     </div>
     <img src="/images/track.jpg" alt="Track" class="absolute top-0 h-full w-full object-cover bg-no-repeat bg-center" />
 </div>
@@ -32,5 +32,18 @@
     <iframe allowtransparency frameborder='0' height='454' scrolling='no'
         src='https://www.strava.com/clubs/1222966/latest-rides/227a837d2882ab46d339c8a035e1673d02c5e91f?show_rides=true'
         width='300'></iframe>
+</div>
+{{ end }}
+
+{{ define "content"}}
+<div class="min-h-32.5"></div>
+{{ end }}
+
+{{ define "map"}}
+<div class="bg-mtc-black flex justify-center items-center" style="height: 550px;">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2201.1486437577473!2d11.589470047589687!3d48.14539994658814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e759061555555%3A0x9b33c9ca4b4d2718!2sSportanlage%20Hirschanger!5e1!3m2!1sde!2sde!4v1717945727619!5m2!1sde!2sde"
+        width="75%" height="65%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 {{ end }}

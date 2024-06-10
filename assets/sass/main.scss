@@ -74,6 +74,14 @@ main {
   display: flex;
   flex-direction: column;
 
+  .section-header {
+    position: relative;
+    height: 520px;
+    max-height: 40vh;
+    min-height: 20%;
+    display: flex;
+  }
+
   .video-container {
     height: calc(100vh - #{$header-height});
     flex-grow: 1;

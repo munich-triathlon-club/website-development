@@ -15,10 +15,10 @@
 </div>
 {{ end }}
 
-{{ define "main" }}
-<div class="h-64 relative">
-    <div class="h-full w-full absolute z-10 flex items-center justify-center">
-        <p class="serif font-bold absolute top-4 text-5xl">Swimming</p>
+{{ define "header" }}
+<div class="section-header">
+    <div class="h-full w-full absolute z-10 flex">
+        <p class="serif font-bold my-auto mx-8 text-5xl">Swimming</p>
     </div>
     <img src="/images/water.jpg" alt="Swim" class="absolute top-0 h-full w-full object-cover bg-no-repeat bg-center" />
 </div>
@@ -39,8 +39,12 @@
 {{ define "map"}}
 <div class="bg-mtc-black flex justify-center items-center" style="height: 550px;">
     <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d665.8174414880851!2d11.547130206822864!3d48.1243208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf4c48854137%3A0xf4227c7e90c69df3!2sSchwimmschule%20Wasserm%C3%A4use%20M%C3%BCnchen%20Isarvorstadt!5e0!3m2!1sde!2sde!4v1714078130643!5m2!1sde!2sde"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462.92394671709025!2d11.547857413815052!3d48.12438310767649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf4c48854137%3A0xf4227c7e90c69df3!2sSchwimmschule%20Wasserm%C3%A4use%20M%C3%BCnchen%20Isarvorstadt!5e1!3m2!1sde!2sde!4v1717945820629!5m2!1sde!2sde"
         width="75%" height="65%" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
+{{ end }}
+
+{{ define "content"}}
+<div class="min-h-32.5"></div>
 {{ end }}

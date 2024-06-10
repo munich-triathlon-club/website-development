@@ -40,7 +40,6 @@
     <div class="bg-zinc-500 flex justify-center">Development Environment</div>
     {{ end }}
     <header class="px-4 flex items-center justify-between">
-        {{block "header" . }}
         <div class="h-full py-2 box-border">
             <a href="{{ .Site.BaseURL }}"><img class="h-full object-cover"
                     src="{{ .Site.BaseURL }}/icons/logo-transparent.png" /></a>
@@ -51,12 +50,11 @@
             <a href="mailto:munichtriathlonclub@gmail.com"><i class="fa-regular fa-envelope"></i></a>
             <div class="ml-5 cursor-pointer"><i id="nav-icon-header" class="fa-solid fa-bars"></i></div>
         </div>
-        {{ end }}
     </header>
-    {{ block "2ndLevelNavigation" . }}{{ end }}
 
     <main>
-        {{ block "main" . }}{{ end }}
+        {{ block "header" . }}{{ end }}
+        {{ block "content" . }}{{ end }}
         {{ block "map" . }}{{ end }}
         {{ block "strava" . }}{{ end }}
     </main>

@@ -548,20 +548,12 @@ video {
   position: absolute;
 }
 
-.relative {
-  position: relative;
-}
-
 .bottom-32 {
   bottom: 8rem;
 }
 
 .top-0 {
   top: 0px;
-}
-
-.top-4 {
-  top: 1rem;
 }
 
 .z-10 {
@@ -573,9 +565,19 @@ video {
   margin-right: 0.75rem;
 }
 
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .ml-5 {
@@ -614,16 +616,24 @@ video {
   height: 3rem;
 }
 
-.h-64 {
-  height: 16rem;
-}
-
 .h-8 {
   height: 2rem;
 }
 
 .h-full {
   height: 100%;
+}
+
+.min-h-3 {
+  min-height: 0.75rem;
+}
+
+.min-h-32 {
+  min-height: 8rem;
+}
+
+.min-h-32\.5 {
+  min-height: 32.5em;
 }
 
 .w-2\/3 {

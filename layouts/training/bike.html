@@ -15,8 +15,8 @@
 </div>
 {{ end }}
 
-{{ define "main" }}
-<div class="p-6 bg-zinc-100 h-full text-black grow">
+{{ define "header" }}
+<div class="section-header">
     {{ .Content }}
 </div>
 {{ end }}
@@ -30,4 +30,8 @@
         src='https://www.strava.com/clubs/1222966/latest-rides/227a837d2882ab46d339c8a035e1673d02c5e91f?show_rides=true'
         width='300'></iframe>
 </div>
+{{ end }}
+
+{{ define "content"}}
+<div class="min-h-32.5"></div>
 {{ end }}
