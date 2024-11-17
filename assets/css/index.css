@@ -580,6 +580,10 @@ video {
   margin-bottom: auto;
 }
 
+.mb-\[120px\] {
+  margin-bottom: 120px;
+}
+
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -622,10 +626,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.min-h-3 {
-  min-height: 0.75rem;
 }
 
 .min-h-32 {
@@ -830,6 +830,11 @@ video {
   line-height: 1.25rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -872,11 +877,6 @@ video {
     line-height: 1;
   }
 
-  .md\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
   .md\:hover\:bg-mtc-yellow:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(254 229 129 / var(--tw-bg-opacity));
@@ -885,5 +885,17 @@ video {
   .md\:hover\:text-black:hover {
     --tw-text-opacity: 1;
     color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 }

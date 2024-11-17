@@ -1,6 +1,5 @@
 ---
 title: "Training"
-date: 16.04.2024
 layout: "training"
 ---
 
